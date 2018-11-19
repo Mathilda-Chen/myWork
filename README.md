@@ -16,9 +16,9 @@ JavaScript 代码:<br>
 >    return (Array(n).join(0) + num).slice(-n);
 >}
 >```
->       Array(5) => 创建了一个长度为5的空数组
->       console.log(Array(5));// [empty × 5]
->       Array(5).join(0) => 用0拼接将数组转换成字符串
+>Array(5) => 创建了一个长度为5的空数组
+>console.log(Array(5));// [empty × 5]
+>Array(5).join(0) => 用0拼接将数组转换成字符串
 >       console.log(Array(5).join(0));// 0000
 >       Array(5).join(0)+91 => 通过+,实现字符串的拼接
 >       console.log(Array(5).join(0)+91);// 000091
