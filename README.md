@@ -99,3 +99,14 @@ window.onload = function() {
 定义变量 保存数据 获取元素 绑定元素 绑定事件<br>
 
 字符串，数组，日期，正则，Math => 都是对象<br>
+```
+timer(){
+  var self = this;
+  if(self.time > 0){
+    self.time--;
+    var timer = setTimeout(self.timer, 1000);
+  }else if(self.time == 0){
+    clearTimeout(timer);
+  }
+}
+```
