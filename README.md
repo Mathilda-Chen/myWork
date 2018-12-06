@@ -110,3 +110,16 @@ timer(){
   }
 }
 ```
+jQuery 学习：<br>
+（js）<br>
+入口函数：等待页面加载完成后才会执行。（script代码写在head里面，可以写在任意地方）<br>
+        如果写两个，那么注册事件就会被覆盖，可以用addEventListener，但是存在兼容问题。<br>
+        （可以省略）<br>
+        ```window.onload = function(){};```
+(jQuery)<br>
+写法一：```$(document).ready(function(){});```
+写法二：```$(function(){});```
+js的入口函数执行的要比jQuery的晚一些<br>
+jQuery的入口函数要等文档加载完才执行，但是不会等图片加载完成<br>
+js的入口函数要等文档加载完，且图片加载完才执行<br?
+使用jquer的步骤：引入jQuery文件，入口函数，功能实现 
