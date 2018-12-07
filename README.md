@@ -117,9 +117,24 @@ jQuery 学习：<br>
         （可以省略）<br>
         ```window.onload = function(){};```
 (jQuery)<br>
-写法一：```$(document).ready(function(){});```
-写法二：```$(function(){});```
+写法一：```$(document).ready(function(){});```<br>
+写法二：```$(function(){});```<br>
 js的入口函数执行的要比jQuery的晚一些<br>
 jQuery的入口函数要等文档加载完才执行，但是不会等图片加载完成<br>
 js的入口函数要等文档加载完，且图片加载完才执行<br?
-使用jquer的步骤：引入jQuery文件，入口函数，功能实现 
+使用jquer的步骤：引入jQuery文件，入口函数，功能实现 <br>
+jq对象与DOM对象的区别：<br>
+>1.什么是DOM对象（js对象）：使用js的方式获取到的元素就是js对象（DOM对象）
+>2.什么是jq对象：使用jq的方式获取到的元素就是jq对象
+>3.jq对象与js对象的区别：js对象不能调用jq对象的方法（是两个不同对象）
+>4.jq对象与js对象的联系：jq对象就是js对象的一个集合，伪数组，里面存放了一堆js对象（宏观上）；
+>jq对象不能调用DOM对象的方法，需要把DOM对象转换成jq对象<br>
+```
+var cloth = document.getElementById("cloth");
+$(cloth).text("呵呵");//DOM对象变成jQuery对象
+var $li = $("li");
+$li[0].style.backgroundColor = "red";//jQuery对象转换成DOM对象
+$li.get(0).style.backgroundColor = "yellow";//第二种方法
+```
+
+
