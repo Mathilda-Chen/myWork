@@ -124,10 +124,10 @@ jQuery的入口函数要等文档加载完才执行，但是不会等图片加�
 js的入口函数要等文档加载完，且图片加载完才执行<br?
 使用jquer的步骤：引入jQuery文件，入口函数，功能实现 <br>
 jq对象与DOM对象的区别：<br>
->1.什么是DOM对象（js对象）：使用js的方式获取到的元素就是js对象（DOM对象）
->2.什么是jq对象：使用jq的方式获取到的元素就是jq对象
->3.jq对象与js对象的区别：js对象不能调用jq对象的方法（是两个不同对象）
->4.jq对象与js对象的联系：jq对象就是js对象的一个集合，伪数组，里面存放了一堆js对象（宏观上）；
+>1.什么是DOM对象（js对象）：使用js的方式获取到的元素就是js对象（DOM对象）<br>
+>2.什么是jq对象：使用jq的方式获取到的元素就是jq对象<br>
+>3.jq对象与js对象的区别：js对象不能调用jq对象的方法（是两个不同对象）<br>
+>4.jq对象与js对象的联系：jq对象就是js对象的一个集合，伪数组，里面存放了一堆js对象（宏观上）；<br>
 >jq对象不能调用DOM对象的方法，需要把DOM对象转换成jq对象<br>
 ```
 var cloth = document.getElementById("cloth");
@@ -136,5 +136,12 @@ var $li = $("li");
 $li[0].style.backgroundColor = "red";//jQuery对象转换成DOM对象
 $li.get(0).style.backgroundColor = "yellow";//第二种方法
 ```
-
+$其实就一个函数，后面要跟小括号<br>
+参数不同，功能也不同<br>
+1.参数是一个function,入口函数<br>
+`$(function(){});`<br>
+2.$(domObj)把dom对象转换成jQuery对象<br>
+`$(document).ready(function(){});`<br>
+3.参数是一个字符串，用来找对象<br>
+`$("div") $("#btn") $(".current")`<br>
 
